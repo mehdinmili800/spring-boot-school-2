@@ -22,7 +22,7 @@ public class Student {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     /**
      * User object to student. This property connects the student to
@@ -32,24 +32,24 @@ public class Student {
     @JoinColumn(name="student_id")
     private User student;
 
-    /**
-     * Student Date of Birth.
-     */
-    @Column(name = "dob", nullable = false)
-    private LocalDate dateOfBirth;
-
-    /**
-     * Gender.
-     */
-    @Enumerated(EnumType.STRING)
-    @Column(name="gender")
-    private Gender gender;
-
-    /**
-     * Year when student started.
-     */
-    @Column(name = "start_year", nullable = false)
-    private int start_year;
+//    /**
+//     * Student Date of Birth.
+//     */
+//    @Column(name = "dob", nullable = false)
+//    private LocalDate dateOfBirth;
+//
+//    /**
+//     * Gender.
+//     */
+//    @Enumerated(EnumType.STRING)
+//    @Column(name="gender")
+//    private Gender gender;
+//
+//    /**
+//     * Year when student started.
+//     */
+//    @Column(name = "start_year", nullable = false)
+//    private int start_year;
 
     /**
      * Student address.
@@ -57,74 +57,77 @@ public class Student {
     @Column(name = "address", nullable = false)
     private String address;
 
-    /**
-     * Student education id.
-     */
-    @Column(name = "educationId", nullable = false, length = 11)
-    private String educationId;
-
-    /**
-     * Student healthcare id.
-     */
-    @Column(name = "healthCareId", length = 16)
-    private String healthCareId;
-
-    /**
-     * Student "first" parent name.
-     */
-    @Column(name = "parent1Name", length = 32)
-    private String parent1Name;
-
-    /**
-     * Student "second" parent name.
-     */
-    @Column(name = "parent2Name", length = 32)
-    private String parent2Name;
-
-    /**
-     * Student "first" parent phone number.
-     */
-    @Column(name = "parent1Phone", length = 24)
-    private String parent1Phone;
-
-    /**
-     * Student "second" parent phone number.
-     */
-    @Column(name = "parent2Phone", length = 24)
-    private String parent2Phone;
+//    /**
+//     * Student education id.
+//     */
+//    @Column(name = "educationId", nullable = false, length = 11)
+//    private String educationId;
+//
+//    /**
+//     * Student healthcare id.
+//     */
+//    @Column(name = "healthCareId", length = 16)
+//    private String healthCareId;
+//
+//    /**
+//     * Student "first" parent name.
+//     */
+//    @Column(name = "parent1Name", length = 32)
+//    private String parent1Name;
+//
+//    /**
+//     * Student "second" parent name.
+//     */
+//    @Column(name = "parent2Name", length = 32)
+//    private String parent2Name;
+//
+//    /**
+//     * Student "first" parent phone number.
+//     */
+//    @Column(name = "parent1Phone", length = 24)
+//    private String parent1Phone;
+//
+//    /**
+//     * Student "second" parent phone number.
+//     */
+//    @Column(name = "parent2Phone", length = 24)
+//    private String parent2Phone;
 
     /**
      * Constructor to make a new instance.
      *
-     * @param student User object to student.
-     * @param dateOfBirth Student Date of Birth.
-     * @param start_year Year when student started.
+//     * @param student User object to student.
+//     * @param dateOfBirth Student Date of Birth.
+//     * @param start_year Year when student started.
      * @param address Student address.
-     * @param gender Gender.
-     * @param educationId Student education id.
-     * @param healthCareId Student healthcare id.
-     * @param parent1Name Student "first" parent name.
-     * @param parent2Name Student "second" parent name.
-     * @param parent1Phone Student "first" parent phone number.
-     * @param parent2Phone Student "second" parent phone number.
+//     * @param gender Gender.
+//     * @param educationId Student education id.
+//     * @param healthCareId Student healthcare id.
+//     * @param parent1Name Student "first" parent name.
+//     * @param parent2Name Student "second" parent name.
+//     * @param parent1Phone Student "first" parent phone number.
+//     * @param parent2Phone Student "second" parent phone number.
 //     * @param classroom Class where student learn.
      */
-    public Student(User student, LocalDate dateOfBirth, int start_year, String address, Gender gender,
-                   String educationId, String healthCareId, String parent1Name,
-                   String parent2Name, String parent1Phone, String parent2Phone
+    public Student(
+//            User student, LocalDate dateOfBirth, int start_year,
+                   String address
+//                   Gender gender,
+//                   String educationId, String healthCareId, String parent1Name,
+//                   String parent2Name, String parent1Phone, String parent2Phone
 //                   Classroom classroom
     ) {
-        this.student = student;
-        this.dateOfBirth = dateOfBirth;
-        this.start_year = start_year;
+//        this.student = student;
+//        this.dateOfBirth = dateOfBirth;
+//        this.start_year = start_year;
         this.address = address;
-        this.gender = gender;
-        this.educationId = educationId;
-        this.healthCareId = healthCareId;
-        this.parent1Name = parent1Name;
-        this.parent2Name = parent2Name;
-        this.parent1Phone = parent1Phone;
-        this.parent2Phone = parent2Phone;
+//        this.gender = gender;
+//        this.educationId = educationId;
+//        this.healthCareId = healthCareId;
+//        this.parent1Name = parent1Name;
+//        this.parent2Name = parent2Name;
+//        this.parent1Phone = parent1Phone;
+//        this.parent2Phone = parent2Phone;
 //        this.classroom = classroom;
     }
 
